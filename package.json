@@ -1,0 +1,26 @@
+{
+  "name": "myfirstapp",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon ./bin/www"
+  },
+  "dependencies": {
+    "axios": "^0.20.0",
+    "cheerio": "^1.0.0-rc.3",
+    "cheerio-httpcli": "^0.8.1",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "ejs": "^3.1.5",
+    "express": "~4.16.1",
+    "fs": "0.0.1-security",
+    "git": "^0.1.5",
+    "http-errors": "~1.6.3",
+    "module": "^1.2.5",
+    "morgan": "~1.9.1",
+    "nodemon": "^2.0.4",
+    "path": "^0.12.7",
+    "pug": "2.0.0-beta11",
+    "request": "^2.88.2"
+  }
+}

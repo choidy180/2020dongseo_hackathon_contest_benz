@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Noto+Sans+KR:wght@500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/css/main.css">
+    <title><%= title %></title>
+</head>
+
+<body>
+    <div id="bgimg">
+        <div class="bg">
+            <div class="first_left_area">
+                <div class="first_left_info">
+                    <h1 class="name" id="name"></h1>
+                    <div class="main_top_time_box">
+                        <h1 id="watch">00:00</h1>&nbsp;&nbsp;&nbsp;<h1 id="am_pm">AP</h1>
+                    </div>
+                    <img class="weather_icon" src="sun.png" alt="sun" title="sun">
+                    <span class="temp"></span>
+                    <h1></h1>
+                </div>
+            </div>
+            <div class="first_right_area">
+                <div class="weather_frame_box">
+                    <iframe class="weather_frame" width="1390px" height="1300px"
+                        src="https://www.weather.go.kr/w/index.do" frameborder="0"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="blank_box">
+    </div>
+    <div class="blank_box_second">
+    </div>
+    <div id="second_bg_img">
+        <p class="desc"></p>
+        <div class="human_box_area">
+            <div class="human_box">
+                <img class="man_img" src="man/man_summer_2.png" alt="">
+            </div>
+            <div class="human_box">
+                <img class="man_img" src="woman/woman_summer_2.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div id="third_area">
+        <div class="third_box">
+            <div class="special_brand">
+                MUSINSA
+            </div>
+            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <a href="<%=musinsa_special_data[0].link%>">
+                            <img src="<%=musinsa_special_data[0].img%>" class="d-block w-100" alt="...">
+                        </a>
+                        <div class="special_event_box">
+                            <div class="special_event_box_event">
+                                <span>EVENT</span>
+                            </div>
+                            <div class="special_event_box_date">
+                                <span>진행중 <%=musinsa_special_data[0].date%></span>
+                            </div>
+                        </div>
+                        <p class="special_event_brand"><%=musinsa_special_data[0].brand%></p>
+                        <a class="special_event_title"
+                            href="<%=musinsa_special_data[0].link%>"><%=musinsa_special_data[0].title%></a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="<%=musinsa_special_data[1].link%>">
+                            <img src="<%=musinsa_special_data[1].img%>" class="d-block w-100" alt="...">
+                        </a>
+                        <div class="special_event_box">
+                            <div class="special_event_box_event">
+                                <span>EVENT</span>
+                            </div>
+                            <div class="special_event_box_date">
+                                <span>진행중 <%=musinsa_special_data[1].date%></span>
+                            </div>
+                        </div>
+                        <p class="special_event_brand"><%=musinsa_special_data[1].brand%></p>
+                        <a class="special_event_title"
+                            href="<%=musinsa_special_data[1].link%>"><%=musinsa_special_data[1].title%></a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="<%=musinsa_special_data[2].link%>">
+                            <img src="<%=musinsa_special_data[2].img%>" class="d-block w-100" alt="...">
+                        </a>
+                        <div class="special_event_box">
+                            <div class="special_event_box_event">
+                                <span>EVENT</span>
+                            </div>
+                            <div class="special_event_box_date">
+                                <span>진행중 <%=musinsa_special_data[2].date%></span>
+                            </div>
+                        </div>
+                        <p class="special_event_brand"><%=musinsa_special_data[2].brand%></p>
+                        <a class="special_event_title"
+                            href="<%=musinsa_special_data[2].link%>"><%=musinsa_special_data[2].title%></a>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+        <div class="third_topic_box"">
+            <div>
+            <a class=" third_topic_a" href="https://store.musinsa.com<%=musinsa_shopping_topic[6].link%>">
+            <img class="third_topic_img" src="<%=musinsa_shopping_topic[4].img%>" alt="">
+            <strong class="third_topic_title"><%=musinsa_shopping_topic[4].title%></strong>
+            <p class="third_topic_content"><%=musinsa_shopping_topic[4].content%></p>
+            <p class="third_topic_content"><%=musinsa_shopping_topic[4].date%></p>
+            </a>
+        </div>
+    </div>
+    <div class="third_topic_box"">
+        <div>
+            <a class=" third_topic_a" href="https://store.musinsa.com<%=musinsa_shopping_topic[6].link%>">
+        <img class="third_topic_img" src="<%=musinsa_shopping_topic[5].img%>" alt="">
+        <strong class="third_topic_title"><%=musinsa_shopping_topic[5].title%></strong>
+        <p class="third_topic_content"><%=musinsa_shopping_topic[5].content%></p>
+        <p class="third_topic_content"><%=musinsa_shopping_topic[5].date%></p>
+        </a>
+    </div>
+    </div>
+    <div class="third_topic_box">
+        <div>
+            <a class=" third_topic_a" href="https://store.musinsa.com<%=musinsa_shopping_topic[6].link%>">
+                <img class="third_topic_img" src="<%=musinsa_shopping_topic[6].img%>" alt="">
+                <strong class="third_topic_title"><%=musinsa_shopping_topic[6].title%></strong>
+                <p class="third_topic_content"><%=musinsa_shopping_topic[6].content%></p>
+                <p class="third_topic_content"><%=musinsa_shopping_topic[6].date%></p>
+            </a>
+        </div>
+    </div>
+    </div>
+    <div class="fourth_box">
+        <div class="input_head_box">
+            <select name="sex" id="select_sex" class="main_select_clothes">
+                <option value="">성별무관</option>
+                <option value="남성">남성</option>
+                <option value="여성">여성</option>
+            </select>
+            <select name="top" id="select_top" class="main_select_clothes">
+                <option value="반팔" selected>반팔</option>
+                <option value="민소매">민소매</option>
+                <option value="셔츠">셔츠</option>
+                <option value="맨투맨">맨투맨</option>
+                <option value="후드">후드</option>
+                <option value="스웨터">스웨터</option>
+                <option value="블라우스">블라우스</option>
+                <option value="니트">니트</option>
+            </select>
+            <select name="bottom" id="select_bottom" class="main_select_clothes">
+                <option value="반바지">반바지</option>
+                <option value="청바지">청바지</option>
+                <option value="슬랙스">슬랙스</option>
+                <option value="롱스커트">롱스커트</option>
+                <option value="미니스커트">미니스커트</option>
+            </select>
+            <select name="outer" id="select_outer" class="main_select_clothes">
+                <option value="아우터">아우터없음</option>
+                <option value="코트">코트</option>
+                <option value="패딩">패딩</option>
+            </select>
+            <select name="shoes" id="select_shoes" class="main_select_clothes">
+                <option value="운동화">운동화</option>
+                <option value="단화">단화</option>
+                <option value="스니커즈">스니커즈</option>
+                <option value="슬리퍼">슬리퍼</option>
+                <option value="부츠">부츠</option>
+                <option value="구두">구두</option>
+            </select>
+            <button class="search_button" id="search_button" style="margin-right: 30px;">검색</button>
+            <button class="search_button" id="target">코디 추천</button>
+        </div>
+        <div class="fifth_area_area">
+            <div class="fifth_area">
+                <div class="stylist_box">
+                    <img id="left_stylist_box_img" src="man/man_summer_1.png" alt="">
+                </div>
+                <div class="product_recommendation">
+                    <% if (rank_data[0] != 'undefined') {%>
+                        <div class="style_recommendation">
+                            <% for(var i = 0; i < 5; i++){%>
+                            <a class="main_content_link" href="https://store.musinsa.com<%=rank_data[i].link%>">
+                            <div class="main_content">
+                                <div class="main_content_img_box">
+                                    <img src="<%=rank_data[i].img%>" alt="">
+                                </div>
+                                <div class="main_content_content_box">
+                                    <span><%=rank_data[i].title%></span>
+                                </div>
+                            </div>
+                            </a>
+                            <%}%>
+                        </div>
+                        <div class="style_recommendation">
+                            <% for(var i = 5; i < 10; i++){%>
+                                <a class="main_content_link" href="https://store.musinsa.com<%=rank_data[i].link%>">
+                                <div class="main_content">
+                                    <div class="main_content_img_box">
+                                        <img src="<%=rank_data[i].img%>" alt="">
+                                    </div>
+                                    <div class="main_content_content_box">
+                                        <span><%=rank_data[i].title%></span>
+                                    </div>
+                                </div>
+                                </a>
+                            <%}%>
+                        </div>
+                        <div class="style_recommendation">
+                            <% for(var i = 10; i < 15; i++){%>
+                                <a class="main_content_link" href="https://store.musinsa.com<%=rank_data[i].link%>">
+                                <div class="main_content">
+                                    <div class="main_content_img_box">
+                                        <img src="<%=rank_data[i].img%>" alt="">
+                                    </div>
+                                    <div class="main_content_content_box">
+                                        <span><%=rank_data[i].title%></span>
+                                    </div>
+                                </div>
+                                </a>
+                            <%}%>
+                        </div>
+                        <div class="style_recommendation">
+                            <% for(var i = 15; i < 20; i++){%>
+                                <a class="main_content_link" href="https://store.musinsa.com<%=rank_data[i].link%>">
+                                <div class="main_content">
+                                    <div class="main_content_img_box">
+                                        <img src="<%=rank_data[i].img%>" alt="">
+                                    </div>
+                                    <div class="main_content_content_box">
+                                        <span><%=rank_data[i].title%></span>
+                                    </div>
+                                </div>
+                                </a>
+                            <%}%>
+                        </div>
+                    <%} else {%>
+                    <%}%>
+                </div>
+                <div class="stylist_box">
+                    <img id="right_stylist_box_img" src="woman/woman_3.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script>
+        const style_button = document.getElementById('search_button');
+        const select_sex = document.getElementById('select_sex');
+        const select_top = document.getElementById('select_top');
+        const select_bottom = document.getElementById('select_bottom');
+        const select_outer = document.getElementById('select_outer');
+        const select_shoes = document.getElementById('select_shoes');
+
+        style_button.addEventListener('click', () => {
+
+            // 선택
+            var choice_sex = select_sex.value;
+            var choice_top = select_top.value;
+            var choice_bottom = select_bottom.value;
+            var choice_outer = select_outer.value;
+            var choice_shoes = select_shoes.value;
+
+            // 크롤링 데이터들
+            let top_data = []
+            let bottom_data = []
+            let outer_data = []
+            let shoes_data = []
+
+            page_move = () => {
+                location.href = 'http://localhost:3000/' + choice_sex + '+' + choice_top + '+' + choice_bottom + '+' + choice_outer + '+' + choice_shoes;
+            }
+            page_move();
+        })
+    </script>
+    <script src="/js/background_img_change.js"></script>
+    <script src="/js/Time.js"></script>
+    <script src="/js/getWeather.js"></script>
+    <script src="/js/second_bg_img.js"></script>
+    <script src="/js/select_people.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

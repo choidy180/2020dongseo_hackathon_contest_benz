@@ -1,0 +1,468 @@
+html{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+}
+.bg{ 
+    background-color:rgba(0, 0, 0, 0.6); /*살짝 투명한 검정으로 배경색*/ 
+    width:100%; 
+    height:1000px; 
+    position: absolute; /*다른 요소들 위로 겹쳐질 수 있게함*/
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+h1, p{
+    margin: 0px;
+} 
+#bgimg{
+    position: absolute;
+    margin: 0px;
+    height: 1000px;
+    min-height: 1000px;
+    overflow: hidden;
+    background-size:cover; 
+    display:block; 
+    width:100%;
+    min-width: 800px; 
+    color:#ffffff; 
+    text-align: center;
+    z-index: 10;
+} 
+/* 맨앞으로 빼기 */
+h1,p,a{ 
+    position: relative; z-index:1000; /*맨 앞으로 나오도록 함*/ 
+}
+
+.first_left_area{
+    position: absolute;
+    left: 0px;
+    width: 30%;
+    min-width: 500px;
+    height: 100%;
+    z-index: 50;
+}
+.first_right_area{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+    min-width: 1480px;
+    height: 100%;
+}
+.first_left_info{
+    text-align: left;
+    padding-left: 50px;
+}
+.name{
+    font-size: 150px;
+    font-weight: 100;
+    font-family: 'Do Hyeon', sans-serif;
+    margin-top: 150px;
+    animation: fadein 1.5s;
+    transition: all ease 0.5s 0s;
+}
+.name:hover{
+    font-size: 170px;
+    transition: all ease 0.5s 0s;
+}
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+.main_top_time_box{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+#watch{
+    margin-top: -40px;
+    font-size: 120px;
+    font-family: 'Do Hyeon', sans-serif;
+    animation: fadein 1.5s;
+    transition: all ease 0.5s 0s;
+}
+#watch:hover{
+    font-size: 140px;
+    transition: all ease 0.5s 0s;
+}
+.main_top_time_apm{
+    font-size: 50px;
+}
+.weather_icon{
+    width: 200px;
+    height: auto;
+    transition: all ease 0.5s 0s;
+}
+.weather_icon:hover{
+    -webkit-transform: rotate(30deg);
+    transform: rotate(30deg);
+    transition: all ease 0.5s 0s;
+    width: 220px;
+}
+.blank_box{
+    width: 100%;
+    height: 5px;
+    background-color: #292A2D;
+    margin-bottom: 10px;
+}
+.weather_frame_box{
+    width: 1100px;
+    height: 100%;
+    overflow: hidden;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    z-index: 80;
+}
+.weather_frame{
+    position: absolute;
+    top: -70px;
+    margin-left: -290px;
+    z-index: 25;
+}
+.temp{
+    margin-left: 0px;
+    margin-top: -20px;
+    font-size: 45px;
+}
+.desc{
+    text-align: center;
+    font-family: 'Do Hyeon', sans-serif;
+    font-size: 100px;
+    animation: fadein 1.5s;
+    color: white;
+    transition: all ease 0.5s 0s;
+}
+.desc:hover{
+    font-size: 120px;
+    transition: all ease 0.5s 0s;
+}
+.blank_box_second{
+    margin-top: 980px;
+    width: 100%;
+    height: 20px;
+    background-color: #292A2D;
+}
+#second_bg_img{
+    width: 100%;
+    height: 1000px;
+    overflow: hidden;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: 100%;
+    background-position: bottom;
+}
+#second_bg_img img{
+    margin-top: 0px;
+    width: 60%;
+    height: auto;
+    transition: all ease 0.5s 0s;
+    overflow: hidden;
+}
+#second_bg_img img:hover{
+    width: 65%;
+    height: auto;
+    transition: all ease 0.5s 0s;
+}
+.human_box_area{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.human_box{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#third_area{
+    width: calc(100%-40px);
+    height: auto;
+    min-height: 430px;
+    padding: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.third_box{
+    width: 450px;
+    height: auto;
+    min-height: 430px;
+    margin-right: 50px;
+}
+.special_box_area{
+    width: 450px;
+    height: 100%;
+    background-color: blue;
+}
+.special_box{
+    width: 450px;
+    height: 100%px;
+    background-color: blue;
+}
+.special_event_box{
+    width: 60%;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+.special_event_box_event{
+    width: 54px;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #2930FF;
+    font-size: 16px;
+    color: #fff;
+    font-family: "Musinsa",sans-serif !important;
+}
+.special_event_box_date{
+    width: 216px;
+    height: 100%;
+    background-color: #0078FF;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    color: #fff;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.special_event_brand{
+    margin-top: 5px;
+    font-size: 14px;
+    font-family: "AppleSDGothicNeo", "Apple SD Gothic Neo","Apple SD 산돌고딕 Neo",sans-serif;
+    color: #000;
+}
+.special_event_title{
+    font-size: 18px;
+    line-height: 22px;
+    font-family: 'Noto Sans KR', sans-serif;
+    text-decoration: none;
+    color: black;
+}
+.special_event_title:hover{
+    text-decoration: none;
+    color: black;
+}
+.special_brand{
+    width: 450px;
+    height: 50px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    font-size: 27px;
+}
+.third_topic_box{
+    width: 350px;
+    height: auto;
+    min-height: 550px;
+    margin-right: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 115px;
+}
+.third_topic_img{
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+.third_topic_title{
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: normal;
+    white-space: nowrap;
+    font-weight: 700;
+}
+.third_topic_a{
+    color: black;
+}
+.third_topic_a:hover{
+    text-decoration: none;
+    color: black;
+}
+.third_topic_content{
+    margin-top: 5px;
+    font-size: 14px;
+    color: #aaa;
+    line-height: 16px;
+    word-break: keep-all;
+}
+.fourth_box{
+    width: 100%;
+    height: auto;
+    min-height: 900px;
+    padding:20px;
+    padding-top: 0px;
+    margin-bottom: 30px;
+}
+.input_head_box{
+    width: 100%;
+    min-width: 1800px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 65px;
+}
+.main_select_clothes{
+    padding-left: 10px;
+    width: 180px;
+    height: 100%;
+    border: none;
+    border-bottom: 2px solid black;
+    outline: none;
+    font-size: 20px;
+    margin-right: 50px;
+}
+.input_head_title{
+    font-size: 20px;
+}
+.search_button{
+    width: 180px;
+    height: 40px;
+    border: 1px solid blue;
+    background-color: white;
+    font-size: 25px;
+    outline: none;
+    border-radius: 5px;
+}
+.search_button:hover{
+    border: 1px solid blue;
+    outline: none;
+}
+.search_button:active{
+    border: 1px solid blue;
+    outline: none;
+}
+.search_button:visited{
+    border: 1px solid blue;
+    outline: none;
+}
+.fifth_area_area{
+    width: 100%;
+    min-width: 1800px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.fifth_area{
+    width: 1800px;
+    height: 700px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+.stylist_box{
+    width: 20%;
+    min-width: 400px;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+}
+.product_recommendation{
+    width: 60%;
+    min-width: 1000px;
+    height: 100%;
+    font-size: 40px;
+}
+.style_recommendation{
+    width: 100%;
+    height: 174.5px;
+    border-bottom: 1px solid #DDDDDD;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#left_stylist_box_img{
+    width: 150%;
+    height: auto;
+}
+
+#right_stylist_box_img{
+    width: 130%;
+    height: auto;
+}
+.main_content{
+    width: 200px;
+    height: 100%;
+    border-right: 1px solid #DDDDDD;
+}
+.main_content_img_box{
+    width: 100%;
+    height: 130px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.main_content_content_box{
+    width: 100%;
+    height: 35px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    font-size: 20px;
+    font-weight: 100;
+    font-family: 'Do Hyeon', sans-serif;
+}
+.main_content_link{
+    color: black;
+    text-decoration: none;
+}
+.main_content_link:hover{
+    color: black;
+    text-decoration: none;
+}
+.main_content_link:visited{
+    color: black;
+    text-decoration: none;
+}
+.main_content_link:active{
+    color: black;
+    text-decoration: none;
+}
